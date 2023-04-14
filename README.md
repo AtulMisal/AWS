@@ -39,3 +39,10 @@ Top AWS Services --
    1. On Demand Instance
    2. Spot Instance
    3. Reserved Instance 
+
+
+
+
+
+
+![Detailed of AWS](https://user-images.githubusercontent.com/108976232/232002406-a30f57c9-33fc-491e-ac8b-ad1bde9e1ebd.jpg)
