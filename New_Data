@@ -1,0 +1,298 @@
+What is cloud computing?
+  In simple words cloud computing enables on-demand services like compute,storage,networking etc
+  which can be accessed through internet and the user is not required to manage these resources.
+  These are scalable, flexible and works on pay-as-you-go
+  
+Cloud service models -
+  1. Infra. as a service -
+  2. Software as a service -
+  3. Platform as a service -
+
+Cloud deployment models -
+  1. Public    -
+  2. Private   -
+  3. Hybrid    -
+  4. Community -  
+--------------------------------------------------------------------------------------------------------------------------------
+What is AWS?
+  AWS is a cloud service provider which enables on-demand services like compute,storage,networking etc
+  which can be accessed through internet and the user is not required to manage these resources.
+  These are scalable, flexible and works on pay-as-you-go.
+  
+Features -
+  1. Scalable
+  2. Flexible
+  3. Pay-as-you-go
+  4. Securable
+  5. Cost effective
+--------------------------------------------------------------------------------------------------------------------------------
+AWS Region & Availability Zones -
+   Region - It's a geographical location where the data centers are located.
+   Availability Zones - These are a kind of data centers present in a region.
+   Local Zones -  Act's as a connection between two diff region.
+   Subnet - Subnet is a logical subdivision of larger network
+   Route table - A route table is a set of rules which determines where network traffic from your vpc is directed.
+--------------------------------------------------------------------------------------------------------------------------------
+AWS Core Services Domains -
+  1. Compute
+  2. Storage
+  3. Database
+  4. Network
+  5. Security
+  6. Migration
+  7. Managment Tools
+  8. Messaging
+  9. Analytices
+  
+1. Amazon Lambda -
+   "ELB is a load balancing service provided by AWS which distributes incoming traffic across several targets such as EC2 instance, Lambda function etc"
+    AWS Lambda is a serverless compute service by AWS
+	Developers do not need worry about which resources to lunch, or how to manage them.
+	All they must do is just put the code on AWS Lambda and it should work.
+
+2. Elastic Load Balancer -
+    We have deployed our application on a server and there some chances by which it will stop working& these are -
+       1. Sudden spike in app. traffic
+	   2. App. crash due to unknown reasons.
+	   3. EC2 instance crash
+	coz of these our application might not work so to avoid this we use ELB.
+    It will balances the incomming load on app so that it will not crash.
+  
+   With the help of Auto-Scaling we will balance the no of instance to handle the traffic but with load balancer will tell the user to go on which server.
+
+   Create an Auto-Scaling groups and will attach a load balancer to it as -
+     First create auto-scalling group then go to load balancer select your load balancer which type you want.
+     Click on that auto-scalling group in detailes edit and add that target group you have created.
+	   Click on load balancer -> create new load balancer -> add target group -> these target groups will point to auto-scalling group
+	   To do this goto auto-scalling part in that select your group -> details -> edit -> add target group -> save
+	 Now as we want to revert user on that website that they want to access so goto load balancer select that -> listener -> click on view/edit rule -> save  
+   Types -
+     1. Classic load balancer
+	 2. Network load balancer
+	 3. Application load balancer
+	 4. Getway load balancer
+3. Amazon Autoscaling -
+      It ensuers that you have enough EC2 instances available to handle the load of your application by launching or terminating EC2 instance automatically.
+	  To do this go to autoscaling part add configuration here which AMI you want also after which threshold you have to increase/decrease your instance number.
+
+4. Amazon elastic compute cloud -
+       It is a web service that provides secure,resizable compute capacity in the cloud.
+   Instance -
+        It is a virtual server for running applications on EC2.
+
+5. Amazon machine image (AMI) -
+        It is an template that containes server configuration(OS,Application,Application Server) required to launch your instance.		
+
+6. Elastic Beanstalk -
+        AWS Elastic Beanstalk is an AWS managed service for web applications. Elastic beanstalk is a pre-configured EC2 server 
+		that can directly take up your application code and environment configurations and use it to automatically provision 
+		and deploy the required resources within AWS to run the web application.
+           As this is PaaS type of model wit provides dashboard level of access.
+    
+	What Is The Difference Between AWS Elastic Beanstalk And Amazon Ec2?
+        EC2 allows creating a server in the AWS cloud where the user has to pay on an hourly basis.
+        Elastic Beanstalk provides an environment that contains an optional database and AWS components 
+		such as an Auto-Scaling Group, Elastic Load Balancer,  Security Group. It manages these items whenever 
+		you want to update the software running in AWS. 	
+   
+-----------------------------------------------------------------------------------------------------------------------------------
+AWS Storage Services -
+
+  What is AWS Cloud Storage?
+    Cloud storage is a cloud computing model that enables storing data and files on the internet through a cloud computing 
+	provider that you access either through the public internet or a dedicated private network connection.
+	
+Storage service -
+   1. EBS -
+       As the name suggest this is a type of block storage that is made for using with EC2. It comes as attached to EC2 just like hard drive attached to your system.
+	   It is persistent in nature.
+	   
+   2. EC2 (Root Volume)
+   
+   3. S3 -
+        It is a simple storage which is used to store files and other data. It is costly. We can store any kind of data.
+   
+   4. Glacier -
+        This service provides archival storage. Means you can store a data which is not frequently accessed.
+   
+   5. EFS -
+        When you want to craet a common storage for EC2 instances/servers running on ec2 which are present in diff availability zones then we will use this service.
+   
+--------------------------------------------------------------------------------------------------------------------------------
+
+AWS Security Services -
+ 1. IAM -
+      With the help of this we will provide the necessory access to the users.
+ 2. KMS -
+      Data encryption is a common practice to preserve data over network.With amazon key management service, you ca safely encrypt data that moves over aws cloud platform network.
+ 3. AWS Shield -
+       It is used to protect aws infrastructure.It comes with two levels of protection.
+       Those are AWS Shield and AWS Shield Advanced
+ 4. AWS Trusted Advisor -
+       It acts as a inspector in your aws environment to make recommendation that helps to save money,improve systen performance.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+AWS Database Services -
+  Database plays an important role in data processing and storing. AWS database service is one of the most important amazon web services that provide clients with various database solutions
+
+1. Amazon DynamoDB
+2. Amazon Aurora
+3. Amazon Relational Database Service
+4. Amazon ElastiCache
+5. Amazon Redshift
+6. Amazon Kinesis
+
+What is relational and Irrelational database?
+
+
+Data - 
+  In simple words data is a facts related to any objects.
+Database -
+  A systamatic collection of data.
+DBMS- Data Base Management System -
+  It is a collection of programs that enables its users to access database, manipulate data, reporting of that data.
+
+Relational database -
+   It is a datastructure that allows you to link information from different tables.
+   All fields are mandetory to fill.
+   
+Schema -
+  Design of database
+
+Non Relational Database -
+  It stores the data without a structured mechanism to link data from diff tabels.
+------------------------------------------------------------------------------------------------------------------------------------
+
+AWS Networking Services -
+1. VPC -
+    A VPC is a virtual network which enbles to launch aws resources into it.
+	There are two types of VPC's 
+	  1. Default VPC - Created by default when aws account is created.
+	  2. Non default VPC - Which will be created by the user.
+	VPC is created in aws region. Subnets covers diff AZ's. One subnet for one AZ.
+	
+2. Rout 53 -
+    It is a cloud domain naming system which is scalable in nature. With the help of this will route the traffice between two private subnet.
+
+3. Amazon Direct Connect -
+      AWS provides a network service that establish a dedicated network connection between your on-premise infrastructure & AWS Cloud Platform.
+
+-------------------------------------------------------------------------------------------------------------------
+AWS DevOps Services -
+1. AWS CodeCommit -
+    It is fully managed source control service that hosts secured Git-based repositories.
+
+2. AWS CodeBuild -
+    It is fully managed continuous integration service that complies source code,runs tests & produces software packages that 
+	are ready to deploy.You don't need to provision,manage & scale your own build server, it scales continuously.	
+     	
+3. AWS CodeDeploy -	  
+     It is a fully managed deployment service that automates software deployments to a verity of compute services such as EC2,
+	 Lambda & your on-premise servers
+ 
+4. AWS CodePipeline -
+     It is fully managed continuous delivery service that helps you to automate your release pipelines for fast and reliable 
+	 application and infrastructure updates.It automates the build,test,deploy phase of your release process.
+
+----------------------------------------------------------------------------------------------------------------------------------------
+AWS CloudFront -
+    AWS CloudFront is a web service that speeds up distribution of your static and dyanmic web content, such as .html, .css, .js and image files to your users.
+----------------------------------------------------------------------------------------------------------------------------------------	
+AWS CloudWatch - (Monitoring tool)
+    It provides real time monitoring of AWS resources & customer application running on Amazon infrastructure.
+	
+	We are using this service coz suppose we have deployed our application on server in day time the app utilization is more as compared to night but since we are not using 
+	any monitoring tool we will have to pay same amount as we are paying in day time and to avoid this we are using CloudWatch service.
+	Also with this service we will know if our app is down then the cause will be shown by this service to us.
+	
+First create an service on which you want to add it to Cloud Watch. Copy instance id
+Go to Cloud Watch - Matrics - Paste that instance id - select on which basis you want to add - select cpu (If want select more)-
+Then click on action create dashboard if you want to create new dashboard.
+Now create an alarm - On which basis you want this - Email/text - for email - create SNS service add topic - in subscription add your mail - confirm that -
+add this sns in alarm - what you have to do if this alarm happens - delete ec2 instance.	
+	 (https://www.youtube.com/watch?v=JxxP88ZXmQA) -- Youtube link
+------------------------------------------------------------------------------------------------------------------------------------------
+AWS CloudFormation -
+       A complex application on AWS will have many other aws resources and to manage them is a very difficult task to do this we will use CloudFormation.
+       
+	   It is a service that helps you to model and set up your AWS resources so that you can spend less time on managing those resources & give more time to 
+	   you application that runs on AWS.
+	   
+	   Will create templates in this and we will add other resources to this template.
+	   A template uses json script.
+	   
+	   Here we have to create a template by drag and drop activity.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Snapshots -
+    Snapshots only captures data that has been written to your Amazon EBS volume at the time snapshot command is issued.
+
+Amazon Machine image (AMI) -
+    AMI is a special type of virtual appliance that is used to create a virtual machine within EC2.
+    It's an image of your running EC2 instance which will be created by taking snapshot of that EC2 instance
+
+    Click on that instance that you want to creaate an image -> action -> image -> create image
+    Now when you create an instance select the image that you have created. 	
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+CloudTrail -
+   It is an logging service which can be used to log the history of API calls.
+   With the help of this we will see that which user of aws console has which access.
+   
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Redshift -
+   
+ What is data wearhouse?
+ Get brief info on Redshift
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+AWS Kinesis -
+   Amazon Kinesis is a managed, scalable, cloud-based service that allows real-time processing of streaming large amount of data per second.
+-------------------------------------------------------------------------------------------------------------------------------- 
+ElastiCache -
+   It is web service that improves the performance of web applications. It reduces load on database. Speed up the application performance.
+   
+   Create an ElastiCache with reddis option provide necessory data. Add the port which is given in that configuration in security groups which we have selected.
+   Now create 1 ec2 instance add that security group or create new and add that port here also.
+   Launch that ec2 instance then update it and install reddis.
+   Copy the endpoint value from that ElastiCache. select that and is desc. you will get this.
+   Then in ec2 launched machine perform following steps -
+     reddis-cli -h paste that endpoint -p provide port no here that comes while creating ElastiCache
+	 (https://www.youtube.com/watch?v=E_PuOTmfRJY) -- Youtube link
+Reddis -
+   Open source NoSQL database 
+------------------------------------------------------------------------------------------------------------------------------------
+What do you mean by Elastic Beanstalk?
+  Elastic Beanstalk is a service for deploying and scaling web applications and services. 
+  Upload your code and Elastic Beanstalk automatically handles the deployment
+In simple words if we have to launch a web app without configuring of any resources use this.
+Just paste your code with that environment (php,tomcat,....) it will create all aws resources that are necessory.
+And then by clicking on configuration of Elastic Beanstalk you are able to change the default configuration like change type of ec2 and others.
+  (https://www.youtube.com/watch?v=o-_GRZDq80w)  -- Youtube link
+----------------------------------------------------------------------------------------------------------------------------------------
+Cloud Trail -
+  AWS CloudTrail monitors and records account activity across your AWS infrastructure, giving you control over storage, 
+  analysis.
+In simple words it tracks all the activity within your account. along with SNS service and also you can creat a cloud watch logs.
+While creating the trail you have to give a s3 bucket name so creat there only and all data should be added there only.  
+  (https://www.youtube.com/watch?v=labIrWoAUOQ) -- Youtube link
+--------------------------------------------------------------------------------------------------------------------------------------
+Redshift -
+ Amazon Redshift is a specialized data warehouse hosted by Amazon Web Services (AWS). 
+ It is a fully managed service, so users are not responsible for handling any of the operational  
+ challenges of establishing and scaling the data warehouse.
+   (https://www.youtube.com/watch?v=fc5WPKnbam8) -- Youtube link
+
+
+
+
+
+Elastic Beanstalk    https://www.youtube.com/watch?v=o-_GRZDq80w  
+Cloud Watch          https://www.youtube.com/watch?v=JxxP88ZXmQA 
+ElastiCache          https://www.youtube.com/watch?v=E_PuOTmfRJY                           
+Cloud Trail          https://www.youtube.com/watch?v=labIrWoAUOQ                  
+Redshift             https://www.youtube.com/watch?v=fc5WPKnbam8
+Direct Connect
+CodeCommit                        
+CodeBuild                         
+CodeDeploy                        
+CodePipeline 
