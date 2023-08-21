@@ -1,5 +1,5 @@
 # AWS
-In this we will go through all AWS services that are imp for DevOps.
+In this repo we will go through all AWS services that are imp for DevOps.
 
 Top AWS Services --
  1. AWS Compute service -
